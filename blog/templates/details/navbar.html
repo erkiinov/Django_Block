@@ -1,0 +1,55 @@
+{% load static %}
+    <!-- header part -->
+    <div class="offcanvas_overlay"></div>
+    <header class="header_part dark fixed_left_content">
+        <nav class="d-flex align-content-between flex-wrap">
+            <a class="navbar-brand main_logo" href="index.html"><img src="{% static 'img/logo.png' %}" width="74" srcset="{% static 'img/logo.png' %}"
+                    alt="logo">
+            </a>
+            <!-- offcanvas menu icon -->
+            <div class="header_right_option d-block d-lg-none">
+                <div class="menu-trigger style_2 ">
+                    <div class="dot_icon">
+                        <span class="dot one"></span>
+                        <span class="dot two"></span>
+                        <span class="dot three"></span>
+                        <span class="dot four"></span>
+                        <span class="dot five"></span>
+                        <span class="dot six"></span>
+                        <span class="dot seven"></span>
+                        <span class="dot eight"></span>
+                        <span class="dot nine"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- offcanvas menu icon -->
+
+            <!-- offcanvas menu content -->
+            <div class="canvus_menu_warp h-auto d-none d-lg-flex">
+                <div class="canvus_menu_iner">
+                    <ul>
+                        {% for category in categories %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ category.name }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <!-- offcanvas menu end -->
+            <div class="social_icon float-none">
+                <a class="burger_icon">
+                    <span class="icon" data-icon="&#xeaa7;"></span>
+                </a>
+                <a class="burger_icon">
+                    <span class="icon" data-icon="&#xea90;"></span>
+                </a>
+                <a class="burger_icon">
+                    <span class="icon" data-icon="&#xea96;"></span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <!-- header part end -->

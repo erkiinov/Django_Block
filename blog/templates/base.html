@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>SUSYS BLOG</title>
+    <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
+    <!-- themify icon CSS -->
+    <link rel="stylesheet" href="{% static 'vendors/themify_icons/themify-icons.css' %}" />
+    <!-- icomoon css -->
+    <link rel="stylesheet" href="{% static 'vendors/icomoon/style.css' %}" />
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader-wrapper" id="preloader-wrapper">
+        <div class="percentage-wrapper">
+            <div class="loadbar-percent"></div>
+            <div id="percent"></div>
+        </div>
+    </div>
+    <!-- preloader end -->
+
+    {% include 'details/navbar.html' %}
+        {% block content %}
+
+        {% endblock content %}
+
+
+
+    <!-- jquery slim -->
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+    <!-- popper js -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <!-- bootstarp js -->
+    <script src="{% static '/bootstrap.min.js' %}"></script>
+    <!-- isotope js -->
+    <script src="{% static 'vendors/isotop/isotope.pkgd.js' %}"></script>
+    <!-- wow js -->
+    <script src="{% static 'vendors/wow/wow.min.js' %}"></script>
+    <!-- imagesloaded js -->
+    <script src="{% static 'vendors/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+    <!-- custom js -->
+    <script src="{% static 'js/custom.js' %}"></script>
+    
+</body>
+
+</html>
