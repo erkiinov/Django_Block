@@ -28,9 +28,14 @@
             <div class="canvus_menu_warp h-auto d-none d-lg-flex">
                 <div class="canvus_menu_iner">
                     <ul>
+                        <li class="nav-item dropdown">
+                            <a href="{% url 'home' %}">
+                              All
+                            </a>
+                        </li>
                         {% for category in categories %}
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="{% url 'home' %}?category={{ category.name }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{ category.name }}
                             </a>
                         </li>

@@ -1,16 +1,21 @@
-from django.shortcuts import render
-
-# Create your views here.
 from multiprocessing import context
 from django.shortcuts import render
-from .models import post, Category
+from .models import *
 
 def home(request):
-    posts = post.objects.all()
+
+    category = request.GET.get('category')
+    
+    if category == None:
+        posts = Post.objects.all()
+    else:
+        posts = Post.objects.filter(category__name=category)
+
+
     categories = Category.objects.all()
     context = {
        "posts": posts,
-       "categories": categories,
+       'categories': categories,
     }
     return render(request, 'index.html', context)
 
